@@ -15,9 +15,9 @@ function applyDate(year = '', month = '', day = '') {
   }
   if(day == '') {
     day = getCurrentDay;
-    console.log(day);
   }
-  date.setFullYear(year, month, day);
+  month = month - 1;
+  date.setFullYear(year, month, day );
 };
 
 
