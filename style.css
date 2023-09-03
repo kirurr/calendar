@@ -1,13 +1,11 @@
 .cal-cover {
   width: fit-content;
   background-color: lightgray;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  margin-top: 10%;
   padding: 2rem 1rem;
   border-radius: 5%;
+  position: relative;
 }
 
 .cal-grid {
@@ -28,21 +26,27 @@
 .mon {
   grid-column: mon;
 }
+
 .tue {
   grid-column: tue;
 }
+
 .wed {
   grid-column: wed;
 }
+
 .thu {
   grid-column: thu;
 }
+
 .fri {
   grid-column: fri;
 }
+
 .sat {
   grid-column: sat;
 }
+
 .sun {
   grid-column: sun;
 }
@@ -67,19 +71,32 @@ h1 {
 
 input {
   display: block;
+  max-width: 100%;
+  min-width: none;
 }
 
 input::placeholder {
   text-align: center;
 }
 
-input[type="number"]::-webkit-inner-spin-button, 
-input[type="number"]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 
 button {
   width: 100%;
+}
+
+@media (width <=425px) {
+  .cal-cover {
+    margin-top: 30%;
+    width: 90%;
+  }
+
+  .cal-grid {
+    grid-template-columns: [mon] 1fr [tue] 1fr [wed] 1fr [thu] 1fr [fri] 1fr [sat] 1fr [sun] 1fr;
+  }
 }
