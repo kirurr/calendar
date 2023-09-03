@@ -161,3 +161,10 @@ button.addEventListener('click', function () {
     elementCalGrid.append(calItem);
   };
 });
+
+const rotateButton = document.querySelector('.rotate-button');
+const calCover = document.querySelector('.cal-cover');
+
+rotateButton.addEventListener('click', function() {
+  calCover.classList.toggle('rotate');
+})
